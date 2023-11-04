@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voicify</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">Voicify</a>
+    <nav class="nav-items">
+      <a href="index.html">Home</a>
+      <a href="#">Tic Tac Toe</a>
+      <a href="#">Quiz</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>Voicify</h1>
+      <p>Amplify Your Voice, Energize Your Play, Ignite Learning: Where Speech Unleashes Possibilities!</p>
+      <button id="scrollButton">Learn More</button>
+    </div>
+    <div class="contents">
+      <div class="work">
+        <img src="assets/VRLogo.png" width="50" height="50">
+        <p class="work-heading">Speech-To-Text</p>
+        <p class="work-text">Simple Speech to text convertion that can be used for variety of things.</p>
+      </div>
+      <div class="work">
+        <img src="assets/TicTacToeLogo.png" width="50" height="50">
+        <p class="work-heading">Tic Tac Toe</p>
+        <p class="work-text">Game of tic tac toe, twist being it works on voice.</p>
+      </div>
+      <div class="work">
+        <img src="assets/QLogo.jpeg" width="50" height="50">
+        <p class="work-heading">Simple Quiz</p>
+        <p class="work-text">Simple Quiz that is to be answered with speech.</p>
+      </div>
+    </div>
+    <div id="speech">
+        <button id="action" onclick="runSpeechRecognition()">Tap to Speak (maybe help to start)</button>
+        <p id="output">What ever you speak will appear here....</p>
+      
+    </div>
+  </main>
+
+</body>
+
+<script src="assets/script.js"></script>
+
+</html>
