@@ -8,6 +8,11 @@
 
 
     function runSpeechRecognition() {
+
+      const audioElement = new Audio("assets/ButtonPressed.mp3");
+      // Play the audio
+        audioElement.play();
+      
         // get output div reference
         var output = document.getElementById("output");
         // get action element reference
