@@ -69,17 +69,17 @@
             else if (transcript=="help" || transcript=="commands") {
                 const multilineString = `
       <b>Try Saying:</b> <br>
-      1. Random Question &nbsp;&nbsp;&nbsp;&nbsp;
-      2. Random Number   &nbsp;&nbsp;&nbsp;&nbsp;
-      3. Roll a die/dice    &nbsp;&nbsp;&nbsp;&nbsp;
-      4. Anything you want to say    &nbsp;&nbsp;&nbsp;&nbsp;
+      1. Random Question <br>
+      2. Random Number  <br>
+      3. Roll a die/dice    <br>
+      4. Anything you want to say    <br>
       5. Any Number    <br>
-      6. Tell me a joke    &nbsp;&nbsp;&nbsp;&nbsp;
-      7. Current Date    &nbsp;&nbsp;&nbsp;&nbsp;
-      8. Current Time    &nbsp;&nbsp;&nbsp;&nbsp;
-      9. random fact    &nbsp;&nbsp;&nbsp;&nbsp;
+      6. Tell me a joke   <br>
+      7. Current Date   <br>
+      8. Current Time    <br>
+      9. random fact   <br>
       10. Any animal name for its images    <br>
-      11. Random Activity    &nbsp;&nbsp;&nbsp;&nbsp;
+      11. Random Activity    <br>
     `;
                 output.innerHTML = multilineString;
                     action.innerHTML="Tap to speak";
