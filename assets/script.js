@@ -45,6 +45,10 @@
                 output.innerHTML = "<b>Rolled a Dice:</b> " + num;
                 action.innerHTML="Tap to speak";
             }
+              else if (transcript=="hello" || transcript=="hey"){
+                output.innerHTML = "<b>Text:</b> " + "Hey there! Nice to meet you. Say Help for available commands.";
+                action.innerHTML="Tap to speak";
+            }
             else if (transcript=="throw me a question" || transcript=="get me a random question" || transcript=="random question") {
                 const apiUrl = 'https://opentdb.com/api.php?amount=1';
 
