@@ -73,7 +73,7 @@
       6. Tell me a joke    &nbsp;&nbsp;&nbsp;&nbsp;
       7. Current Date    &nbsp;&nbsp;&nbsp;&nbsp;
       8. Current Time    &nbsp;&nbsp;&nbsp;&nbsp;
-      9. random number fact    &nbsp;&nbsp;&nbsp;&nbsp;
+      9. random fact    &nbsp;&nbsp;&nbsp;&nbsp;
       10. Any animal name for its images    <br>
       11. Random Activity    &nbsp;&nbsp;&nbsp;&nbsp;
     `;
@@ -119,14 +119,14 @@
                 output.innerHTML = "<b>Date:(hr:min:sec)</b> " + currentHours+":"+currentMinutes+":"+currentSeconds;
                 action.innerHTML="Tap to speak";
             }
-            else if (transcript=="random number fact" || transcript=="tell me a fact about a number") {
-                const apiUrl = 'http://numbersapi.com/random';
+            else if (transcript=="random fact" || transcript=="tell me a random fact") {
+                const apiUrl = 'https://uselessfacts.jsph.pl/random.json?language=en';
 
                 // Make a GET request to the API
                 fetch(apiUrl)
-                .then((response) => response.text())
-                .then((fact) => {
-                    output.innerHTML = "<b>Random Fact:</b> " + fact;
+                .then((response) => response.json())
+                .then((data) => {
+                    output.innerHTML = "<b>Random Fact:</b> " + data.text;
                     action.innerHTML="Tap to speak";
                 })
                 .catch((error) => {
