@@ -327,13 +327,7 @@ function cellClicked(id) {
     }
     moves += 1;
     document.getElementById(id).innerHTML = playerText;
-    // randomize orientation (for looks only)
-    var rand = Math.random();
-    if (rand < 0.3) {
-        document.getElementById(id).style.transform = "rotate(180deg)";
-    } else if (rand > 0.6) {
-        document.getElementById(id).style.transform = "rotate(90deg)";
-    }
+
     document.getElementById(id).style.cursor = "default";
     myGrid.cells[cell] = player;
     // Test if we have a winner:
@@ -367,6 +361,15 @@ function restartGame(ask) {
         document.getElementById(id).style.cursor = "pointer";
         document.getElementById(id).classList.remove("win-color");
     }
+    document.getElementById("cell0").innerHTML="11";
+    document.getElementById("cell1").innerHTML="12";
+    document.getElementById("cell2").innerHTML="13";
+    document.getElementById("cell3").innerHTML="14";
+    document.getElementById("cell4").innerHTML="15";
+    document.getElementById("cell5").innerHTML="16";
+    document.getElementById("cell6").innerHTML="17";
+    document.getElementById("cell7").innerHTML="18";
+    document.getElementById("cell8").innerHTML="19";
     if (ask === true) {
         // setTimeout(assignRoles, 200);
         setTimeout(showOptions, 200);
@@ -463,14 +466,7 @@ function makeComputerMove() {
     // console.log("computer chooses " + id);
     document.getElementById(id).innerHTML = computerText;
     document.getElementById(id).style.cursor = "default";
-    // randomize rotation of marks on the board to make them look
-    // as if they were handwritten
-    var rand = Math.random();
-    if (rand < 0.3) {
-        document.getElementById(id).style.transform = "rotate(180deg)";
-    } else if (rand > 0.6) {
-        document.getElementById(id).style.transform = "rotate(90deg)";
-    }
+
     myGrid.cells[cell] = computer;
     moves += 1;
     if (moves >= 5) {
