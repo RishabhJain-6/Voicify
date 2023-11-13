@@ -74,12 +74,11 @@
       3. Roll a die/dice    <br>
       4. Anything you want to say    <br>
       5. Any Number    <br>
-      6. Tell me a joke   <br>
-      7. Current Date   <br>
-      8. Current Time    <br>
-      9. random fact   <br>
-      10. Any animal name for its images    <br>
-      11. Random Activity    <br>
+      6. Current Date   <br>
+      7. Current Time    <br>
+      8. random fact   <br>
+      9. Any animal name for its images    <br>
+      10. Random Activity    <br>
     `;
                 output.innerHTML = multilineString;
                     action.innerHTML="Tap to speak";
