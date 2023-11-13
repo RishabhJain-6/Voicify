@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voicify - Quiz</title>
+    <link rel="shortcut icon" href="assets/QLogo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/Quiz.css">
+</head>
+<body>
+    <div class="background-pattern"></div>
+    <div id="header">
+        <div id="navigation">
+            <a href="index.html">Home</a>
+            <a href="tic-tac-toe.html">Tic-Tac-Toe</a>
+            <a href="Quiz.html">Quiz</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div id="quiz-container">
+        <div id="question" class="question"></div>
+        <div id="options" class="options"></div>
+        <br>
+        <button id="Speak" onclick="runSpeechRecognition()">Tap to speak Answer</button>
+        &emsp;&emsp;&emsp;
+        <button onclick="refreshPage()">Reset</button>
+        <div id="result"></div>
+    </div>
+    <script src="assets/Quiz.js"></script>
+</body>
+</html>
