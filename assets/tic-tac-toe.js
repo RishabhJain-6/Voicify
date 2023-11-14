@@ -689,5 +689,6 @@ function runSpeechRecognition() {
 	};
 
 	// start recognition
+	button.innerHTML = "Tap to speak";
 	recognition.start();
 }
