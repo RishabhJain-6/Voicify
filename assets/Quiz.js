@@ -560,27 +560,8 @@ function shuffleArray(array) {
 
 const quizData1 = quizData;
 
-function getRandomItem() {
-    if (quizData.length === 0) {
-        // If all items have been used, reset the list
-        quizData = quizData1;
-    }
-
-    quizData = shuffleArray(quizData);
-
-    // Generate a random index
-    const randomIndex = Math.floor(Math.random() * quizData.length);
-
-    // Get the item at the random index
-    const randomItem = quizData[randomIndex];
-
-    // Remove the selected item from the list
-    quizData.splice(randomIndex, 1);
-
-    return randomItem;
-}
-
-let currentQuestion = getRandomItem();
+shuffleArray(quizData);
+let currentQuestion = quizData.pop();
 let numQuestion = 0;
 let score = 0;
 
@@ -611,7 +592,8 @@ function selectAnswer(selectedOption) {
     }
 
     numQuestion++;
-    currentQuestion = getRandomItem();
+    shuffleArray(quizData);
+    currentQuestion = quizData.pop();
 
     if (numQuestion < 5) {
         loadQuestion();
