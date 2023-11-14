@@ -572,7 +572,7 @@ function loadQuestion() {
 
     var lineBreak = document.createElement("br");
 
-    questionElement.textContent = currentQuestion.question;
+    questionElement.textContent = `${numQuestion + 1}. ` + currentQuestion.question;
     questionElement.appendChild(lineBreak);
     questionElement.appendChild(document.createTextNode("(say \"option {number}\" or the whole option)"));
 
