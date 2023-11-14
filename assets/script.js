@@ -153,6 +153,7 @@ function runSpeechRecognition() {
 	};
 
 	// start recognition
+	action.innerHTML = "Tap to speak";
 	recognition.start();
 }
 
