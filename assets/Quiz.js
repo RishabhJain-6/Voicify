@@ -607,7 +607,7 @@ function showResult() {
     const questionElement = document.getElementById("question");
     const resultElement = document.getElementById("result");
     if (score == 0) {
-        questionElement.textContent = "Someone Need To Learn Somethings!";
+        questionElement.textContent = "You are depriving a village somewhere of an idiot!";
     } else if (score < Math.ceil(ques / 2)) {
         questionElement.textContent = "Could Have Done Better Better!";
     } else {
