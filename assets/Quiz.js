@@ -551,33 +551,33 @@ let quizData = [{
 ];
 
 function shuffleArray(array) {
-for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-}
-return array;
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 const quizData1 = quizData;
 
 function getRandomItem() {
-if (quizData.length === 0) {
-    // If all items have been used, reset the list
-    quizData = quizData1;
-}
+    if (quizData.length === 0) {
+        // If all items have been used, reset the list
+        quizData = quizData1;
+    }
 
-quizData = shuffleArray(quizData);
+    quizData = shuffleArray(quizData);
 
-// Generate a random index
-const randomIndex = Math.floor(Math.random() * quizData.length);
+    // Generate a random index
+    const randomIndex = Math.floor(Math.random() * quizData.length);
 
-// Get the item at the random index
-const randomItem = quizData[randomIndex];
+    // Get the item at the random index
+    const randomItem = quizData[randomIndex];
 
-// Remove the selected item from the list
-quizData.splice(randomIndex, 1);
+    // Remove the selected item from the list
+    quizData.splice(randomIndex, 1);
 
-return randomItem;
+    return randomItem;
 }
 
 let currentQuestion = getRandomItem();
@@ -585,64 +585,64 @@ let numQuestion = 0;
 let score = 0;
 
 function loadQuestion() {
-const questionElement = document.getElementById("question");
-const optionsElement = document.getElementById("options");
+    const questionElement = document.getElementById("question");
+    const optionsElement = document.getElementById("options");
 
-var lineBreak = document.createElement("br");
+    var lineBreak = document.createElement("br");
 
-questionElement.textContent = currentQuestion.question;
-questionElement.appendChild(lineBreak);
-questionElement.appendChild(document.createTextNode("(say \"option {number}\" or the whole option)"));
+    questionElement.textContent = currentQuestion.question;
+    questionElement.appendChild(lineBreak);
+    questionElement.appendChild(document.createTextNode("(say \"option {number}\" or the whole option)"));
 
-optionsElement.innerHTML = "";
-currentQuestion.options.forEach((option) => {
-    const button = document.createElement("button");
-    button.textContent = option;
-    button.onclick = () => selectAnswer(option);
-    optionsElement.appendChild(button);
-});
+    optionsElement.innerHTML = "";
+    currentQuestion.options.forEach((option) => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.onclick = () => selectAnswer(option);
+        optionsElement.appendChild(button);
+    });
 }
 
 function selectAnswer(selectedOption) {
-const correctAnswer = currentQuestion.correctAnswer.toLowerCase();
+    const correctAnswer = currentQuestion.correctAnswer.toLowerCase();
 
-if (selectedOption.toLowerCase() === correctAnswer) {
-    score++;
-}
+    if (selectedOption.toLowerCase() === correctAnswer) {
+        score++;
+    }
 
-numQuestion++;
-currentQuestion = getRandomItem();
+    numQuestion++;
+    currentQuestion = getRandomItem();
 
-if (numQuestion < 5) {
-    loadQuestion();
-} else {
-    showResult();
-}
+    if (numQuestion < 5) {
+        loadQuestion();
+    } else {
+        showResult();
+    }
 }
 
 function showResult() {
-const questionElement = document.getElementById("question");
-const resultElement = document.getElementById("result");
-if (score == 0) {
-    questionElement.textContent = "Someone Need To Learn Somethings!";
-} else if (score < 3) {
-    questionElement.textContent = "Could Have Done Better Better!";
-} else {
-    questionElement.textContent = "Great Work!";
-}
-resultElement.textContent = `You scored ${score} out of 5!`;
-document.getElementById("options").innerHTML = "";
-document.querySelector("button").disabled = true;
+    const questionElement = document.getElementById("question");
+    const resultElement = document.getElementById("result");
+    if (score == 0) {
+        questionElement.textContent = "Someone Need To Learn Somethings!";
+    } else if (score < 3) {
+        questionElement.textContent = "Could Have Done Better Better!";
+    } else {
+        questionElement.textContent = "Great Work!";
+    }
+    resultElement.textContent = `You scored ${score} out of 5!`;
+    document.getElementById("options").innerHTML = "";
+    document.querySelector("button").disabled = true;
 }
 
 function checkAnswer() {
-const selectedOption = document.querySelector('button:focus');
+    const selectedOption = document.querySelector('button:focus');
 
-if (selectedOption) {
-    selectAnswer(selectedOption.textContent);
-} else {
-    alert("Please select an option before submitting.");
-}
+    if (selectedOption) {
+        selectAnswer(selectedOption.textContent);
+    } else {
+        alert("Please select an option before submitting.");
+    }
 }
 
 // Load the first question
@@ -651,54 +651,55 @@ loadQuestion();
 var button = document.getElementById("Speak");
 
 function runSpeechRecognition() {
-const audioElement = new Audio("assets/ButtonPressed.mp3");
+    const audioElement = new Audio("assets/ButtonPressed.mp3");
 
-// Play the audio
-audioElement.play();
+    // Play the audio
+    audioElement.play();
 
 
-// get output div reference
-var output = document.getElementById("output");
-// get action element reference
-var action = document.getElementById("action");
-// new speech recognition object
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-var recognition = new SpeechRecognition();
+    // get output div reference
+    var output = document.getElementById("output");
+    // get action element reference
+    var action = document.getElementById("action");
+    // new speech recognition object
+    var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+    var recognition = new SpeechRecognition();
 
-// This runs when the speech recognition service starts
-recognition.onstart = function() {
-    button.innerHTML = "Listening Speak...";
-};
+    // This runs when the speech recognition service starts
+    recognition.onstart = function() {
+        button.innerHTML = "Listening Speak...";
+    };
 
-recognition.onspeechend = function() {
-    button.innerHTML = "<small>stopped listening, hope you are done...</small>";
-    recognition.stop();
-}
-
-// This runs when the speech recognition service returns result
-recognition.onresult = function(event) {
-    var transcript = event.results[0][0].transcript.toLowerCase();
-    if (transcript == "colour") {
-        selectAnswer("color");
-    } else if (transcript == "option 1") {
-        selectAnswer(currentQuestion.options[0]);
-    } else if (transcript == "option 2") {
-        selectAnswer(currentQuestion.options[1]);
-    } else if (transcript == "option 3") {
-        selectAnswer(currentQuestion.options[2]);
-    } else if (transcript == "option 4") {
-        selectAnswer(currentQuestion.options[3]);
-    } else {
-        selectAnswer(transcript);
+    recognition.onspeechend = function() {
+        button.innerHTML = "<small>stopped listening, hope you are done...</small>";
+        recognition.stop();
     }
-    button.innerHTML = "Tap to Speak Answer";
-};
 
-// start recognition
-recognition.start();
+    // This runs when the speech recognition service returns result
+    recognition.onresult = function(event) {
+        var transcript = event.results[0][0].transcript.toLowerCase();
+        if (transcript == "colour") {
+            selectAnswer("color");
+        } else if (transcript == "option 1") {
+            selectAnswer(currentQuestion.options[0]);
+        } else if (transcript == "option 2") {
+            selectAnswer(currentQuestion.options[1]);
+        } else if (transcript == "option 3") {
+            selectAnswer(currentQuestion.options[2]);
+        } else if (transcript == "option 4") {
+            selectAnswer(currentQuestion.options[3]);
+        } else {
+            selectAnswer(transcript);
+        }
+        button.innerHTML = "Tap to Speak Answer";
+    };
+
+    // start recognition
+    button.innerHTML = "Tap to Speak Answer";
+    recognition.start();
 }
 
 function refreshPage() {
-// Reload the current page
-location.reload();
+    // Reload the current page
+    location.reload();
 }
