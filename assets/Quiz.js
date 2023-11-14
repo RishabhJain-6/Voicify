@@ -151,6 +151,15 @@ let quizData = [
     },
 ];
 
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 const quizData1 = quizData;
 
 function getRandomItem() {
@@ -158,6 +167,8 @@ function getRandomItem() {
         // If all items have been used, reset the list
         quizData = quizData1;
     }
+
+    quizData = shuffleArray(quizData);
 
     // Generate a random index
     const randomIndex = Math.floor(Math.random() * quizData.length);
