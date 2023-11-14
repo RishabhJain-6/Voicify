@@ -74,7 +74,7 @@ function runSpeechRecognition() {
       5. Any Number    <br>
       6. Current Date   <br>
       7. Current Time    <br>
-      8. random fact   <br>
+      8. Random Fact   <br>
       9. Any animal name for its images    <br>
       10. Random Activity    <br>
     `;
