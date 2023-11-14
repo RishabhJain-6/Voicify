@@ -149,6 +149,406 @@ let quizData = [
         options: ["font-color", "background-color", "text-color", "color"],
         correctAnswer: "color"
     },
+    {
+        question: "What is the function of an IP address in networking?",
+        options: [
+            "Identifying the device in a network",
+            "Encrypting data transmission",
+            "Managing network traffic",
+            "Controlling access to websites"
+        ],
+        correctAnswer: "Identifying the device in a network"
+    },
+    {
+        question: "What is the purpose of the JavaScript programming language in web development?",
+        options: [
+            "Client side Scripting",
+            "Java Syntax Modulation",
+            "Jumbled Script Management",
+            "Just-in-time Compilation"
+        ],
+        correctAnswer: "Client side Scripting"
+    },
+    {
+        question: "What is the purpose of the 'git' version control system?",
+        options: [
+            "Managing database connections",
+            "Tracking changes in source code",
+            "Executing scripts on the server",
+            "Creating graphical user interfaces"
+        ],
+        correctAnswer: "Tracking changes in source code"
+    },
+    {
+        question: "What is the time complexity of a binary search algorithm? (in Big-O)",
+        options: [
+            "1",
+            "n",
+            "log n",
+            "n squared"
+        ],
+        correctAnswer: "log n"
+    },
+    {
+        question: "What is the primary role of an operating system?",
+        options: [
+            "Running applications",
+            "Managing hardware resources",
+            "Designing user interfaces",
+            "Executing database queries"
+        ],
+        correctAnswer: "Managing hardware resources"
+    },
+    {
+        question: "Which sorting algorithm has an average-case time complexity of O(n log n)?",
+        options: [
+            "Bubble Sort",
+            "Insertion Sort",
+            "Merge Sort",
+            "Selection Sort"
+        ],
+        correctAnswer: "Merge Sort"
+    },
+    {
+        question: "What is the purpose of a firewall in network security?",
+        options: [
+            "Encrypting data transmission",
+            "Monitoring system performance",
+            "Preventing unauthorized access",
+            "Managing network protocols"
+        ],
+        correctAnswer: "Preventing unauthorized access"
+    },
+    {
+        question: "In object-oriented programming, what is polymorphism?",
+        options: [
+            "Changing the behavior of an object at runtime",
+            "Combining different data types",
+            "Implementing multiple interfaces",
+            "Creating objects from a class"
+        ],
+        correctAnswer: "Changing the behavior of an object at runtime"
+    },
+    {
+        question: "What is the difference between HTTP and HTTPS?",
+        options: [
+            "HTTP is a protocol for secure data transmission",
+            "HTTPS uses a different port for communication",
+            "HTTP is not secure while HTTPS encrypts data",
+            "There is no difference between HTTP and HTTPS"
+        ],
+        correctAnswer: "HTTP is not secure while HTTPS encrypts data"
+    },
+    {
+        question: "What is the main purpose of a cache in computing?",
+        options: [
+            "Storing data permanently",
+            "Increasing processing speed by storing frequently accessed data",
+            "Executing database queries",
+            "Encrypting sensitive information"
+        ],
+        correctAnswer: "Increasing processing speed by storing frequently accessed data"
+    },
+    {
+        question: "What is the purpose of a DNS (Domain Name System) in networking?",
+        options: [
+            "Encrypting data transmission",
+            "Resolving domain names to IP addresses",
+            "Routing data between networks",
+            "Controlling access to websites"
+        ],
+        correctAnswer: "Resolving domain names to IP addresses"
+    },
+    {
+        question: "What is the role of a function in programming?",
+        options: [
+            "Storing data",
+            "Performing a specific task or calculation",
+            "Creating user interfaces",
+            "Managing network connections"
+        ],
+        correctAnswer: "Performing a specific task or calculation"
+    },
+    {
+        question: "What is the difference between a stack and a queue in data structures?",
+        options: [
+            "Stack follows LIFO while Queue follows FIFO",
+            "Stack follows FIFO while Queue follows LIFO",
+            "Both follow LIFO",
+            "Both follow FIFO"
+        ],
+        correctAnswer: "Stack follows LIFO while Queue follows FIFO"
+    },
+    {
+        question: "What is the purpose of the 'grep' command in Unix/Linux?",
+        options: [
+            "Copying files",
+            "Searching for patterns in text files",
+            "Deleting directories",
+            "Renaming files"
+        ],
+        correctAnswer: "Searching for patterns in text files"
+    },
+    {
+        question: "In database terminology, what is a primary key?",
+        options: [
+            "A key used for encryption",
+            "A unique identifier for a record in a table",
+            "A foreign key in another table",
+            "A key used for sorting records"
+        ],
+        correctAnswer: "A unique identifier for a record in a table"
+    },
+    {
+        question: "What is the purpose of the 'NaN' value in JavaScript?",
+        options: [
+            "Not a Name",
+            "Null and Negligible",
+            "Not a Number",
+            "Non Allocated Null"
+        ],
+        correctAnswer: "Not a Number"
+    },
+    {
+        question: "What is the purpose of the 'finally' block in a try-catch-finally statement in programming?",
+        options: [
+            "To handle exceptions",
+            "To execute code regardless of whether an exception is thrown or not",
+            "To terminate the program",
+            "To skip the catch block"
+        ],
+        correctAnswer: "To execute code regardless of whether an exception is thrown or not"
+    },
+    {
+        question: "What is the difference between a heap and a stack in memory management?",
+        options: [
+            "Both follow LIFO",
+            "Heap is used for static memory allocation and stack is used for dynamic memory allocation",
+            "Stack is used for static memory allocation and heap is used for dynamic memory allocation",
+            "Heap is used for dynamic memory allocation and stack is used for static memory allocation"
+        ],
+        correctAnswer: "Heap is used for dynamic memory allocation and stack is used for static memory allocation"
+    },
+    {
+        question: "What is a DDoS attack?",
+        options: [
+            "Database Deployment Security",
+            "Distributed Denial of Service",
+            "Data Description of Services",
+            "Direct Detection of System"
+        ],
+        correctAnswer: "Distributed Denial of Service"
+    },
+    {
+        question: "What is the purpose of a mutex in multithreading?",
+        options: [
+            "Ensures mutual exclusion and avoids data race",
+            "Controls the execution of the main thread",
+            "Manages file access permissions",
+            "Monitors memory leaks in a program"
+        ],
+        correctAnswer: "Ensures mutual exclusion and avoids data race"
+    },
+    {
+        question: "What is the role of a constructor in object-oriented programming?",
+        options: [
+            "Destructs an object",
+            "Initialise an object when it is created",
+            "Manages memory deallocation",
+            "Modifies class properties"
+        ],
+        correctAnswer: "Initialise an object when it is created"
+    },
+    {
+        question: "What is the purpose of the 'mv' command in Unix/Linux?",
+        options: [
+            "Making variables",
+            "Moving files or directories",
+            "Memory verification",
+            "Mastering version control"
+        ],
+        correctAnswer: "Moving files or directories"
+    },
+    {
+        question: "What is a bitwise operation?",
+        options: [
+            "A low-level programming language",
+            "An operation on individual bits of binary numbers",
+            "A high-level programming language",
+            "An operation on floating-point numbers"
+        ],
+        correctAnswer: "An operation on individual bits of binary numbers"
+    },
+    {
+        question: "What is the purpose of the 'docker' technology in software development?",
+        options: [
+            "Database management",
+            "Virtualisation and containerization",
+            "Version control",
+            "Network security"
+        ],
+        correctAnswer: "Virtualisation and containerization"
+    },
+    {
+        question: "What does the term 'agile' refer to in software development?",
+        options: [
+            "A programming language",
+            "A project management methodology emphasizing flexibility and collaboration",
+            "A type of testing",
+            "An encryption algorithm"
+        ],
+        correctAnswer: "A project management methodology emphasizing flexibility and collaboration"
+    },
+    {
+        question: "What is the purpose of the 'try-catch' block in exception handling?",
+        options: [
+            "To intentionally cause errors",
+            "To execute a block of code only if there are no errors",
+            "To catch and handle errors during program execution",
+            "To terminate the program"
+        ],
+        correctAnswer: "To catch and handle errors during program execution"
+    },
+    {
+        question: "What is the purpose of the 'REST' architectural style in web development?",
+        options: [
+            "Representational State Transfer",
+            "Remote Execution and Stateful Transactions",
+            "Responsive Element Structure Technology",
+            "Reliable and Efficient Security Transmission"
+        ],
+        correctAnswer: "Representational State Transfer"
+    },
+    {
+        question: "What is the role of a 'foreign key' in a relational database?",
+        options: [
+            "Primary identifier of a record",
+            "Used for encryption",
+            "Links to a primary key in another table",
+            "Controls access permissions"
+        ],
+        correctAnswer: "Links to a primary key in another table"
+    },
+    {
+        question: "What is the purpose of a 'kernel' in an operating system?",
+        options: [
+            "Manages hardware resources and provides essential services",
+            "Handles user interface interactions",
+            "Executes database queries",
+            "Encrypts sensitive information"
+        ],
+        correctAnswer: "Manages hardware resources and provides essential services"
+    },
+    {
+        question: "What is the primary function of a 'hash function' in computer science?",
+        options: [
+            "Sorting data",
+            "Encrypting files",
+            "Generating random numbers",
+            "Mapping data to a fixed-size string of characters"
+        ],
+        correctAnswer: "Mapping data to a fixed-size string of characters"
+    },
+    {
+        question: "What is the purpose of the 'git merge' command in version control?",
+        options: [
+            "Create a new branch",
+            "Commit changes to the repository",
+            "Combine changes from different branches",
+            "Revert to a previous commit"
+        ],
+        correctAnswer: "Combine changes from different branches"
+    },
+    {
+        question: "In computer networking, what is the role of a router?",
+        options: [
+            "Connects devices within the same local network",
+            "Transmits data between different networks",
+            "Manages user authentication",
+            "Encrypts data during transmission"
+        ],
+        correctAnswer: "Transmits data between different networks"
+    },
+    {
+        question: "What is the purpose of the 'npm' command in Node.js development?",
+        options: [
+            "Node Package Manager",
+            "Network Process Manager",
+            "Node Program Module",
+            "Node Page Manager"
+        ],
+        correctAnswer: "Node Package Manager"
+    },
+    {
+        question: "What is the primary function of a 'stack pointer' in computer architecture?",
+        options: [
+            "Manages memory allocation",
+            "Points to the next instruction to be executed",
+            "Organizes data in a stack",
+            "Monitors network traffic"
+        ],
+        correctAnswer: "Points to the next instruction to be executed"
+    },
+    {
+        question: "What does the term 'Big O notation' represent in algorithm analysis?",
+        options: [
+            "Order of Magnitude",
+            "Optimal Algorithm",
+            "On-demand Operation",
+            "Time and Space Complexity"
+        ],
+        correctAnswer: "Time and Space Complexity"
+    },
+    {
+        question: "What is the purpose of the 'this' keyword in object-oriented programming?",
+        options: [
+            "Refers to the current class",
+            "Specifies the return type of a function",
+            "Refers to the current instance of the class",
+            "Identifies a variable"
+        ],
+        correctAnswer: "Refers to the current instance of the class"
+    },
+    {
+        question: "In computer graphics, what does RGB stand for?",
+        options: [
+            "Red Green Blue",
+            "Random Graphics Buffer",
+            "Resolution Gain Boost",
+            "Recursive Grid Builder"
+        ],
+        correctAnswer: "Red Green Blue"
+    },
+    {
+        question: "What is the purpose of the 'sudo' command in Unix/Linux?",
+        options: [
+            "Super user Do",
+            "System Update and Overwrite",
+            "Secure User Directory Operations",
+            "Sequential Undo"
+        ],
+        correctAnswer: "Super user Do"
+    },
+    {
+        question: "What is the difference between 'heap memory' and 'stack memory' in a programming language?",
+        options: [
+            "Heap memory is used for static memory allocation while stack memory is used for dynamic memory allocation",
+            "Heap memory is managed by the operating system while stack memory is managed by the programmer",
+            "Heap memory is used for dynamic memory allocation while stack memory is used for static memory allocation",
+            "Heap memory is accessed through pointers while stack memory is accessed through arrays"
+        ],
+        correctAnswer: "Heap memory is used for dynamic memory allocation while stack memory is used for static memory allocation"
+    },
+    {
+        question: "What is the purpose of a 'VLAN' in networking?",
+        options: [
+            "Virtual Local Area Network used for network segmentation",
+            "Variable Length Area Network used for dynamic IP addressing",
+            "Virtual Linear Access Node used for routing data",
+            "Volatile Link Allocation Node used for temporary connections"
+        ],
+        correctAnswer: "Virtual Local Area Network used for network segmentation"
+    },
 ];
 
 
