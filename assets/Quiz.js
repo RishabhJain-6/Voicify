@@ -208,7 +208,15 @@ function selectAnswer(selectedOption) {
 }
 
 function showResult() {
+    const questionElement = document.getElementById("question");
     const resultElement = document.getElementById("result");
+    if (score == 0) {
+        questionElement.textContent = "Someone Need To Learn Somethings!";
+    } else if (score < 3) {
+        questionElement.textContent = "Could Have Done Better Better!";
+    } else {
+        questionElement.textContent = "Great Work!";
+    }
     resultElement.textContent = `You scored ${score} out of 5!`;
     document.getElementById("options").innerHTML = "";
     document.querySelector("button").disabled = true;
