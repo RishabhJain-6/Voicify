@@ -564,6 +564,7 @@ shuffleArray(quizData);
 let currentQuestion = quizData.pop();
 let numQuestion = 0;
 let score = 0;
+let ques = Math.floor(Math.random() * (10 - 5 + 1)) + 5;
 
 function loadQuestion() {
     const questionElement = document.getElementById("question");
@@ -595,7 +596,7 @@ function selectAnswer(selectedOption) {
     shuffleArray(quizData);
     currentQuestion = quizData.pop();
 
-    if (numQuestion < 5) {
+    if (numQuestion < ques) {
         loadQuestion();
     } else {
         showResult();
@@ -607,12 +608,12 @@ function showResult() {
     const resultElement = document.getElementById("result");
     if (score == 0) {
         questionElement.textContent = "Someone Need To Learn Somethings!";
-    } else if (score < 3) {
+    } else if (score < Math.ceil(ques / 2)) {
         questionElement.textContent = "Could Have Done Better Better!";
     } else {
         questionElement.textContent = "Great Work!";
     }
-    resultElement.textContent = `You scored ${score} out of 5!`;
+    resultElement.textContent = `You scored ${score} out of ${ques}!`;
     document.getElementById("options").innerHTML = "";
     document.querySelector("button").disabled = true;
 }
