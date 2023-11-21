@@ -571,8 +571,8 @@ function loadQuestion() {
     const optionsElement = document.getElementById("options");
 
     var lineBreak = document.createElement("br");
-
-    questionElement.textContent = `${numQuestion + 1}. ` + currentQuestion.question;
+    let a = ques-numQuestion;
+    questionElement.textContent = `${a}. ` + currentQuestion.question;
     questionElement.appendChild(lineBreak);
     questionElement.appendChild(document.createTextNode("(say \"option {number}\" or the whole option)"));
 
@@ -592,6 +592,11 @@ function selectAnswer(selectedOption) {
         score++;
     }
 
+    const resultElement = document.getElementById("result");
+    resultElement.textContent = "Correct Answer: " + currentQuestion.correctAnswer;
+}
+
+function nextQuestion() {
     numQuestion++;
     shuffleArray(quizData);
     currentQuestion = quizData.pop();
