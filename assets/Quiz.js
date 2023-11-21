@@ -601,6 +601,8 @@ function nextQuestion() {
     shuffleArray(quizData);
     currentQuestion = quizData.pop();
 
+    document.getElementById("result").textContent="";
+    
     if (numQuestion < ques) {
         loadQuestion();
     } else {
