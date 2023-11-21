@@ -692,3 +692,12 @@ function runSpeechRecognition() {
 	button.innerHTML = "Tap to speak";
 	recognition.start();
 }
+
+function resetScore() {
+	score.computer=0;
+	score.player=0;
+	score.ties=0;
+	document.getElementById("computer_score").innerHTML = score.computer;
+	document.getElementById("tie_score").innerHTML = score.ties;
+	document.getElementById("player_score").innerHTML = score.player;
+}
